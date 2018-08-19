@@ -1,0 +1,3 @@
+It's a simple problem gives away the flag by strings.
+Can be done by gdb as well by reading the value of $esi register.
+The secret_password function is prints "s3cr3t_backd00r_passw0rd"
