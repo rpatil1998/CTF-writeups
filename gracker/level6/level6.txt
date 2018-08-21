@@ -1,0 +1,8 @@
+A buffer overflow problem!
+Analysing the .c file we get to know that gates_of_arjia function is called every time the binary is executed.In that function input is taken from the user and stored in a 32 bit input buffer and then the 0x8048690 is called.So what we have to do is to overflow the buffer and then overwrite the return address of spawn_shell function.So by brute forcing i got to know that after 44 input bits the memory for return address starts.
+So i ran the program with with following input and got the shell: 
+
+	 ./level6 $(python -c "print 'a'*44 + '\x8b\x85\x04\x08' ")
+
+where the bits in the last are in little endian format of the address 
+of spawn_shell.
