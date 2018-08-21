@@ -1,0 +1,13 @@
+This challenge can be solved with the help of netcat(nc) and nmap.We have a address given so we have to check for any port open on that host between(1453-3501).This can be done by
+	nmap  -p 1453-3501 127.0.0.1 (look at the attached image for more info.)
+
+After getting the open port what we have to do is to communicate with the port
+	 nc 127.0.0.1 2989
+
+This prints some stuff not rally important to us accept the last line.
+(LLLSDLaserControl) and paste it on the command line
+	  # LLLSDLaserControl
+Then 
+	  cat/home/level6/.pass
+
+Do these things before the connection dies with the port.

