@@ -1,0 +1,9 @@
+A simple format string problem.The %08x character can be used to 
+read the content of the stack.Having the addresses of all the registers 
+and functions stored in the stack we can 
+check the content of each register by using %s character.
+I found the password at the 14 address by brute forcing all the 
+addresses!
+Looking for a better way to do it.
+
+(python -c "print '\x06\xdc\xff\xff'+'%08x.'*13+'%s'") |  nc domain port
