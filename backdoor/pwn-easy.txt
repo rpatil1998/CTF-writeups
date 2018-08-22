@@ -1,0 +1,11 @@
+A problem based on buffer overflow.After accepting 64 inputs the buffer gets overflowed and overwrites the content of variable a.
+
+So what we have to do is to set a to 1701064803.Any input given for the memory address gets stored as a hexadecimal value.
+hex(1701064803)=0X65643063
+ASCII(0X65643063)=ed0c
+Since the value of the last byte is stored higher in memory we have to give the following input
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc0de
+
+this will print the flag
+CTF{D0_1T_Y0UR3S3LF}
