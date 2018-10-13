@@ -1,0 +1,1 @@
+there is a command called whoami in ubantu prints the name of the current user.
