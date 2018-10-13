@@ -1,0 +1,13 @@
+In this question RsaCtfTool did the job.
+(https://github.com/Ganapati/RsaCtfTool)
+
+generate a pulic key with n and e
+eg ./RsaCtfTool.py --createpub -n 7828374823761928712873129873981723...12837182 -e 65537
+
+then write the cipher text into a file
+file=open("cipher.txt","w")
+cipher=hex("original cipher").decode("hex")
+file=file.write(cipher)
+
+then use the decoder
+./RsaCtfTool.py --publickey ./key.pub --uncipherfile ./ciphered\_file
