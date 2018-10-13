@@ -1,0 +1,1 @@
+In this question the flag is xor of two strings.Out of which one string is extracted step by step from gdb.
